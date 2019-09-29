@@ -11,12 +11,12 @@ def findARoot(value):
         root = -2
         increment = -1
     guess = 0
-    while searchComplete != True:
+    while not searchComplete:
         power = 2
         if abs(root)**power > abs(value):
             searchComplete = True
             break
-        while power < 6 and searchComplete != True:
+        while power < 6 and not searchComplete:
             guess = root**power
             if guess == value:
                 # Could just return [root, power]
@@ -26,7 +26,7 @@ def findARoot(value):
             elif abs(guess) > abs(value):
                 break
             power = power + 1
-        if searchComplete != True:
+        if not searchComplete:
             root = root + increment
     if solutionFound:
         return [root, power]
