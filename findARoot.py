@@ -16,8 +16,6 @@ def findARoot(value):
             guess = root**power
             if guess == value:
                 return [root, power]
-            elif abs(guess) > abs(value):
-                break
             power = power + 1
         root = root + increment
     return []
