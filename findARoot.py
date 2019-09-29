@@ -1,13 +1,12 @@
+from math import copysign
 
 def findARoot(value):
     if (value == 0):
         return [0,2]
-    if (value > 0):
-        root = 2
-        increment = 1
-    else:
-        root = -2
-        increment = -1
+
+    root = copysign(2, value)
+    increment = copysign(1, value)
+
     while True:
         power = 2
         if abs(root)**power > abs(value):
