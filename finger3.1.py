@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from findARoot import findARoot
             
 value = int(input("Enter a number: "))

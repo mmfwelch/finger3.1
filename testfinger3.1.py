@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from findARoot import findARoot
 
 def check(value, answer):
