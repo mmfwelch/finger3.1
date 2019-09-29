@@ -2,7 +2,7 @@
 def findARoot(value):
     if (value == 0):
         return [0,2]
-    solutionFound = False
+    answer = []
     searchComplete = False
     if (value > 0):
         root = 2
@@ -20,16 +20,12 @@ def findARoot(value):
             guess = root**power
             if guess == value:
                 # Could just return [root, power]
+                answer = [root, power]
                 searchComplete = True
-                solutionFound = True
                 break
             elif abs(guess) > abs(value):
                 break
             power = power + 1
-        if not searchComplete:
-            root = root + increment
-    if solutionFound:
-        return [root, power]
-    else:
-        return []
+        root = root + increment
+    return answer
 
