@@ -5,4 +5,4 @@ answer = findARoot(value)
 if (answer == []):
     print("No root found")
 else:
-    print(str(answer[0]) + '^' + str(answer[1]) + ' = ' + str(value) )
+    print(answer[0], '^', answer[1], ' = ', value, sep='')
