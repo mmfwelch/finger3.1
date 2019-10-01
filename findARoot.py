@@ -4,7 +4,7 @@ def findARoot(value):
     if (value == 0):
         return [0,2]
 
-    root = copysign(2, value)
+    root = copysign(1, value)
     increment = copysign(1, value)
 
     while True:
